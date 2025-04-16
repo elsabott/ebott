@@ -1,0 +1,80 @@
+<!-- Make game/generator thing, link to home page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Positive Affirmation Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fffaf0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #5a4a42;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    #affirmation {
+      font-size: 1.5rem;
+      text-align: center;
+      max-width: 600px;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #e6d3b3;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d9c4a4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✨ Your Daily Affirmation ✨</h1>
+  <div id="affirmation">Click the button to receive an affirmation</div>
+  <button onclick="generateAffirmation()">Generate Affirmation</button>
+
+  <script>
+    const affirmations = [
+      "You are capable of achieving amazing things.",
+      "Every day is a fresh start.",
+      "You are worthy of love and success.",
+      "Believe in yourself and all that you are.",
+      "You radiate positivity and kindness.",
+      "You are stronger than you think.",
+      "Your potential is limitless.",
+      "You are doing your best, and that is enough.",
+      "Good things are coming your way.",
+      "You deserve happiness and peace."
+    ];
+
+    function generateAffirmation() {
+      const randomIndex = Math.floor(Math.random() * affirmations.length);
+      document.getElementById('affirmation').textContent = affirmations[randomIndex];
+    }
+  </script>
+<a href="index.html" style="margin-top: 20px; color: #5a4a42; text-decoration: none;">Back to Home Page</a>
+</body>
+</html>
